@@ -1,0 +1,19 @@
+<article class="gif">
+  <Gif::Image src={{@gif.images.original.url}} alt="{{@gif.title}}" />
+  <div class="details">
+    <h3>
+      <LinkTo @route="gif" @model={{@gif}}>
+        {{@gif.title}}
+      </LinkTo>
+    </h3>
+    <div class="detail owner">
+      <span>Creator:</span> {{#if @gif.user.dispay_name }} {{@gif.user.dispay_name}} {{else}} N/A {{/if}}
+    </div>
+    <div class="detail type">
+      <span>GIPHY Profile:</span> {{#if @gif.user.profile_url }}{{ @gif.user.profile_url}} {{else}} N/A {{/if}}
+    </div>
+    <div class="detail bedrooms">
+      <span>GIPHY Link:</span> {{#if @gif.url}} {{@gif.url}} {{else}} N/A {{/if}}
+    </div>
+  </div>
+</article>

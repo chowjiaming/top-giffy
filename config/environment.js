@@ -47,5 +47,6 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.GIPHY_ACCESS_TOKEN = 'ZiYGYAk0lKDXOcwErK4PEDZ22KWnoBoK';
   return ENV;
 };

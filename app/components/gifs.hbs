@@ -1,0 +1,14 @@
+<div class="gifs">
+  <label>
+    <span>Search Top 50 Results</span>
+    <Input @value={{this.query}} class="light" />
+  </label>
+
+  <ul class="results">
+    <Gifs::Filter @gifs={{@gifs}} @query={{this.query}} as |results|>
+      {{#each results as |gif|}}
+        <li><Gif @gif={{gif}} /></li>
+      {{/each}}
+    </Gifs::Filter>
+  </ul>
+</div>
